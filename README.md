@@ -17,13 +17,13 @@ Referenzen:
 5. Knopf für die Backend Connection im Frontend hinzugefügt
 ![](./bilder/photo_2024-06-19_13-49-22.jpg)
 
-6. Wahl der Container Registry
+6. Wahl der Container Registry  
 Wir haben uns dazu entschieden AWS zu benutzen, da wir damit am meisten Erfahrung haben.
 
-7. Dockerfile für Frontend
+7. Dockerfile für Frontend  
 ![](./bilder/photo_2024-06-19_13-49-27.jpg)
 
-8. Dockerfile für Backend
+8. Dockerfile für Backend  
 ![](./bilder/photo_2024-06-19_13-49-31.jpg)
 
 9. Docker Compose File schreiben
