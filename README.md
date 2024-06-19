@@ -1,12 +1,11 @@
 Hier befindet sich Projekt Cool Cars vom Modul 347, dieses Projekt dient dazu Cloud Architektur besser kennenzulernen und praktisch anzuwenden.
 
-Referenzen:
+Referenzen:  
+12.4 Projekt Laufzeitumgebung Cool Cars.pdf  
+[https://gitlab.com/bbwrl/m347-ref-card-03-be](https://gitlab.com/bbwrl/m347-ref-card-03-be)  
+[https://gitlab.com/bbwrl/m347-ref-card-03-fe](https://gitlab.com/bbwrl/m347-ref-card-03-fe)
 
-- 12.4 Projekt Laufzeitumgebung Cool Cars.pdf
--  [https://gitlab.com/bbwrl/m347-ref-card-03-be](https://gitlab.com/bbwrl/m347-ref-card-03-be)
--  [https://gitlab.com/bbwrl/m347-ref-card-03-fe](https://gitlab.com/bbwrl/m347-ref-card-03-fe)
-
-1. Frontend und Backend clonen
+1. Frontend und Backend von Git Repo clonen
 
 2. Frontend und Backend lokal laufen lassen
 
