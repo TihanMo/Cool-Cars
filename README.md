@@ -12,19 +12,20 @@ Referenzen:
 
 3. Erstellen einer neuen Datei namens "config.env.local" mit dem Inhalt: "NEXT_PUBLIC_API_URL=http://localhost:8080
 
-4. Frontend mit dem Backend verbinden
-![[Bildschirmfoto 2024-06-19 um 13.18.37 1.png]]
+4. Frontend mit dem Backend verbinden  
+![Frontend mit dem Backend verbinden ](./bilder/Bildschirmfoto%202024-06-19%20um%2013.18.37.png)
 
 5. Knopf für die Backend Connection im Frontend hinzugefügt
+![](./bilder/photo_2024-06-19_13-49-22.jpg)
 
 6. Wahl der Container Registry
-	1. Wir haben uns dazu entschieden AWS zu benutzen, da wir damit am meisten Erfahrung haben
+Wir haben uns dazu entschieden AWS zu benutzen, da wir damit am meisten Erfahrung haben.
 
 7. Dockerfile für Frontend
-	![[Pasted image 20240619133548.png]]
+![](./bilder/photo_2024-06-19_13-49-27.jpg)
 
 8. Dockerfile für Backend
-![[Pasted image 20240619133805.png]]
+![](./bilder/photo_2024-06-19_13-49-31.jpg)
 
 9. Docker Compose File schreiben
 
