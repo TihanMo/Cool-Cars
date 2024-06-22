@@ -4,11 +4,10 @@ services:
   frontend:
     build:
       context: ./m347-ref-card-03-fe
-      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://backend:8080
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
     depends_on:
       - backend
     networks:
@@ -17,7 +16,6 @@ services:
   backend:
     build:
       context: ./m347-ref-card-03-be
-      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     networks:

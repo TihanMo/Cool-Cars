@@ -9,22 +9,21 @@ export default function Home() {
 
   function buttonHandler() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/cars`)
-      .then(response => response.json())
-      .then(data => setCars(data))
-      .catch(error => console.error('Error fetching cars:', error));
+      .then((response) => response.json())
+      .then((data) => setCars(data));
   }
 
   return (
     <div className="App">
       <h1>My Frontend - The very beginning</h1>
       <button onClick={buttonHandler}>load cars</button>
-      <br/>
+      <br />
       <ul>
-        {cars.map(car =>
+        {cars.map((car) => (
           <li key={car.id}>
             {car.brand + " " + car.model + " (" + car.horsePower + ")"}
           </li>
-        )}
+        ))}
       </ul>
       <Link href="/carform">add a new car</Link>
     </div>

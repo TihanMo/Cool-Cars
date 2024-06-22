@@ -3,19 +3,21 @@ package ch.bbw.coolcarsbackend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
 @CrossOrigin("http://localhost:3000")
 public class CarController implements ApplicationRunner {
 
     @Autowired
     private CarRepository carRepository;
 
-    @GetMapping("")  // http://localhost:8080
+    @GetMapping("")
     public String helloWorld() {
         return "Hello World from Backend";
     }
