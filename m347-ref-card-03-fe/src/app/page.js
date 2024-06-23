@@ -1,11 +1,15 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CarForm from "@/app/carform/page";
 import Link from "next/link";
 
 export default function Home() {
   const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
+  }, []);
 
   function buttonHandler() {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/cars`)
