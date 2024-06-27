@@ -1,4 +1,5 @@
-Hier befindet sich Projekt Cool Cars vom Modul 347, dieses Projekt dient dazu Cloud Architektur besser kennenzulernen und praktisch anzuwenden.
+Hier befindet sich Projekt Cool Cars vom Modul 347, dieses Projekt dient dazu Cloud Architektur besser kennenzulernen und praktisch anzuwenden.  
+Die Arbeit wurde so aufgeteilt, das Tihan den "Coding" Teil gemacht hat und Dominik hat sich um die Dokumentation gekümmert, aber wir haben viel überlappt, wenn einer bei einer Aufgabe nicht weitergekommen ist haben wir uns gegenseitig geholfen.
 
 Referenzen:  
 12.4 Projekt Laufzeitumgebung Cool Cars.pdf  
@@ -9,7 +10,8 @@ Referenzen:
 
 2. Frontend und Backend lokal laufen lassen
 
-3. Erstellen einer neuen Datei namens "config.env.local" mit dem Inhalt: "NEXT_PUBLIC_API_URL=http://localhost:8080
+3. Erstellen einer neuen Datei namens "config.env.local" mit dem Inhalt: "NEXT_PUBLIC_API_URL=http://localhost:8080  
+   Der Inhalt des environment Variables wird geändert sobald wir das Image auf AWS hochgeladen haben.
 
 4. Frontend mit dem Backend verbinden  
 ```js
@@ -37,7 +39,7 @@ fetch ('${process.env.NEXT_PUBLIC_API_URL}/cars')
 ｝
 ```
 6. Wahl der Container Registry  
-Wir haben uns dazu entschieden AWS zu benutzen, da wir damit am meisten Erfahrung haben.
+Wir haben uns dazu entschieden AWS zu benutzen, da wir damit am meisten Erfahrung haben.  
 
 7. Dockerfile für Frontend  
 ```dockerfile
@@ -96,9 +98,9 @@ networks:
 ```
 
 10. Docker Container Lokal laufen lassen
-![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/0f9baaa9-8d1a-4d8a-8a37-a0d7802e07b7)
-![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/95d300bf-0d83-402a-861e-a18d7b357ac8)
-
+![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/0f9baaa9-8d1a-4d8a-8a37-a0d7802e07b7) <br>
+![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/95d300bf-0d83-402a-861e-a18d7b357ac8) <br>
+![image](./bilder/website.png)
 
 11. ECR-Repositories erstellen
 ![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/e40ad11d-d3b2-4ba8-9baa-6addea165126)
@@ -126,9 +128,17 @@ networks:
 ![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/aadb4943-1d72-4a45-9b8f-49b2c3dc72f6)
 
 16. Application Load Balancer (ALB) einrichten
+Der Load Balancer sorgt dafür, dass Anfragen gleichmässig verteilt werden.
 ![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/154b164e-9c54-4924-924d-1e769190a931)
 
 17. Netzwerk erstellen (VPC)
+Beim Netzwerk muss man drauf achten, dass man die richtigen Ports offen hat und nur das nötigste darauf Zugriff hat.
 ![image](https://github.com/TihanMo/Cool-Cars/assets/129942592/468d9bca-5791-4e06-b34c-7d5fe61150f7)
 
-17. Sicherheitsgruppen und IAM-Rollen konfigurieren
+18. Sicherheitskonfiguration
+Für die Sicherheit haben wir IAM Rollen erstellt und die Rechte nach dem least privilege Prinzip verteilt.
+![alt text](./bilder/iamrole.png)
+
+1.  Qualitätskontrolle
+Die Qualitätskontrolle wird mit CloudWatch sichergestellt, auf dem Bild sieht man CPU-Usage und man kann beliebig alarme setzen, die einem auf zu hohe Nutzung hinweisen.
+![image](./bilder/image.png)
